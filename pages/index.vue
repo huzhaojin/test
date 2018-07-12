@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import axios from '~/plugins/axios'
 import AppLogo from '~/components/AppLogo.vue'
 // this.$router.push({path: '/company_detail', query: {conpanyId: id}});
 export default {
@@ -41,11 +42,16 @@ export default {
     link: [
       // { rel: 'stylesheet', href: 'css/zzsc.css' }
     ]
-  }
+  },
+  mounted() {
+    axios.get('help/header').then(({status, data})=> {
+      console.log(data)
+    })
+  },
 }
 </script>
 
-<style>
+<style scoped>
 .container {
   min-height: 100vh;
   display: flex;

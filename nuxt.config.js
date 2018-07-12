@@ -51,5 +51,9 @@ css: [
       }
     },
      vendor:['vue-ydui'],
+  },
+
+  env: {
+    baseUrl: 'https://bmkapi.bigmk.ph/api/v1/'
   }
 }
